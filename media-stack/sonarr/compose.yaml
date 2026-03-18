@@ -9,8 +9,8 @@ services:
       - TZ=America/Los_Angeles
     volumes:
       - ./config:/config
-      - ./tv/:/tv
-      - ./downloads/downloads
+      - /data/media/tv/:/tv
+      - /data/downloads:/downloads
     ports:
       - 8989:8989
     restart: unless-stopped
