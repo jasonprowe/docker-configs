@@ -3,3 +3,21 @@ Some of my Docker Configurations for my Homelab
 
 Some of these are probably not configured *ideally*..., but it's a work in progress.
 
+## Most of these configurations are cut down to the bare essential environment variables. 
+
+Ideally, on any fresh Linux box with Docker installed, these compose files work well to get anyone started with a homelab environment.
+
+The [media-stack](./media-stack) folder includes a pretty standard ARR suite for your automated self-hosted media needs. ;)
+
+### Here is the current list of the applications included in this repository:
+
+- **Linkstack** (Self-hosted Linktree-type application)
+- **n8n** (AI-powered automation workflow tool)
+- **Portainer** (Manage Docker Containers on a WebUI)
+- **SearXNG** (Self-Hosted Search Engine)
+- **Immich** (Self-hosted AI-powered Cloud Photos)
+- **File Browser** (WebUI file browser)
+- **DrawIO** (WebUI Drawing and Design Application)
+- **Ghost** (Blogging Webserver)
+- **Home** Assistant (Smart Home Application)
+- **Uptime Kuma** (WebUI Uptime Monitor)
