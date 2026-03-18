@@ -26,9 +26,9 @@ _Note: The default path for media in the compose files is listed as follows:_
 ```yaml
 /data
 ├─ media/
-|  ├─ movies
-|  ├─ tv
-|  ├─ music #optional directory
+|  ├─ movies/
+|  ├─ tv/
+|  ├─ music/ #optional directory
 |
 ├─ downloads/ #torrent downloads go here
 ```
