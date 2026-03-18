@@ -1,0 +1,45 @@
+version: "3.3"
+services:
+  decluttarr:
+    image: ghcr.io/manimatter/decluttarr:v1.50.2 # Note that I am using an older version, as they changed their environment variables past v1.50.2, making this compose file unusuable.
+    container_name: decluttarr
+    restart: unless-stopped
+    network_mode: host  
+    environment:
+      # General Settings
+      TZ: America/Los_Angeles
+      PUID: 1000
+      PGID: 1000
+      LOG_LEVEL: VERBOSE
+      TIMER: 1
+      REMOVE_TIMER: 1
+      REMOVE_FAILED: True
+      REMOVE_FAILED_IMPORTS: True
+      REMOVE_STALLED: True
+      REMOVE_UNMONITORED: True
+      REMOVE_MISSING_FILES: True
+      REMOVE_ORPHANS: True
+      REMOVE_SLOW: True
+      MIN_DOWNLOAD_SPEED: 100
+      SEARCH_BETTER: True
+      SEARCH_MISSING: True
+      DETECT_DELETIONS: True
+      REMOVE_METADATA_MISSING: True
+      # Sonarr Configuration
+      SONARR_URL: $SONARR_URL
+      SONARR_KEY: $SONARR_KEY
+
+      # Radarr Configuration
+      RADARR_URL: $RADARR_URL
+      RADARR_KEY: $RADARR_KEY
+
+      # qBittorrent Configuration
+      QBITTORRENT_URL: $QBITTORRENT_URL
+      QBITTORRENT_USERNAME: admin
+      QBITTORRENT_PASSWORD: $QBITTORRENT_PASSWORD
+
+   # volumes:
+      # Uncomment if you want persistent logs:
+      # - ./logs:/app/logs
+      # Uncomment if you want to sync media paths for deletion detection:
+      # - /home/john/media:/media
