@@ -20,7 +20,7 @@ Ideally, on any fresh Linux box with Docker installed, these compose files work 
 - **Home** Assistant (Smart Home application)
 - **Uptime Kuma** (WebUI uptime monitor)
 
-The [media-stack](./media-stack) folder includes a pretty standard ARR suite for your automated self-hosted media needs. ;)
+The [media-stack](./media-stack) folder includes a pretty standard ARR suite (as well as qBittorrent) for your automated self-hosted media needs. ;)
 
 _Note: The default path for media in the compose files is listed as follows:_
 ```yaml
