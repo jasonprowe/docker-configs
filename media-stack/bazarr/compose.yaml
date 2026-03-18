@@ -9,8 +9,8 @@ services:
       - TZ=America/Los_Angeles
     volumes:
       - ./config:/config
-      - ./movies:/movies #optional
-      - ./tv/:/tv #optional
+      - /data/media/movies:/movies #optional
+      - /data/media/tv/:/tv #optional
     ports:
       - 6767:6767
     restart: unless-stopped
