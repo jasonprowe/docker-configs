@@ -17,7 +17,7 @@ Ideally, on any fresh Linux box with Docker installed, these compose files work 
 - **File Browser** (WebUI file browser)
 - **DrawIO** (WebUI drawing and design application)
 - **Ghost** (Blogging webserver application)
-- **Home** Assistant (Smart Home application)
+- **Home Assistant** (Smart Home application)
 - **Uptime Kuma** (WebUI uptime monitor)
 
 The [media-stack](./media-stack) folder includes a pretty standard ARR suite (as well as qBittorrent) for your automated self-hosted media needs. ;)
