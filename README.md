@@ -28,7 +28,7 @@ Recommended to place these compose file directories in your primary user's home 
 - **Uptime Kuma** (WebUI uptime monitor)
 
 ### Media Applications
-- **Immich** (Self-hosted AI-powered Cloud Photos)
+- **Immich** (Self-hosted AI-powered Cloud Photos) | _Note: Must read [official docs](https://docs.immich.app/install/docker-compose/)!_
 - **Jellyfin** (Open-source media organizer, manage, and stream personal media—movies, TV shows, music, and photos to any device)
 - **qBittorrent** (WebUI torrent client)
 - **Radarr** (Open-source movie collection file manager)
@@ -57,3 +57,19 @@ _Note: The default path for media in the compose files is listed as follows:_
 | 
 ```
 All other configuration files are located in the relative paths of the compose files.
+
+---
+
+# Notes
+
+## Linkstack (Self-hosted Linktree-type application)
+
+- Allows full customization of the landing page with many different links.
+
+I use this application to host my personal links at [jasonprowe.com](https://jasonprowe.com).
+
+## File Browser (WebUI HTTP-based file browser)
+
+File Browser is super useful for uploading files to your private cloud quickly and easily, without the hassle of signing into a Google Drive or OneDrive from a public device.
+
+I personally use this a ton when I'm using a public library computer or when I need to quickly access files securely over the HTTPS protocol.
