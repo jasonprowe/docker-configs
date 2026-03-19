@@ -5,7 +5,9 @@ Some of these are probably not configured *ideally*..., but it's a work in progr
 
 ## Most of these configurations are cut down to the bare essential environment variables. 
 
-Ideally, on any fresh Linux box with Docker installed, these compose files work well to get anyone started with a homelab environment.
+Ideally, on any fresh Linux box with Docker installed, these ```compose.yaml``` files work well to get anyone started with a homelab environment.
+
+Recommended to place these compose file directories in your primary user's home directory (```~```)
 
 **Although most of these configurations work perfectly by themselves, reading individual documentation for these applications is highly recommended** before changing environment variables in the ```compose.yaml``` or settings in the respective application's WebUI.
 
@@ -39,14 +41,19 @@ The [media-stack](./media-stack) folder includes a pretty standard ARR suite (as
 
 - A Samba container is provided in [media-stack](./media-stack) for the Windows SMB Network Sharing Protocol, which defaults to sharing ```/data```.
 
+- Be sure to create ```/data``` using your primary user and ```chown -R 1000:1000 /data``` before getting started to make sure the permissions are set correctly
+
 _Note: The default path for media in the compose files is listed as follows:_
 ```yaml
 /data
 ├─ media/
 |  ├─ movies/
 |  ├─ tv/
-|  ├─ music/ #optional directory
+|  ├─ music/ #optional
 |
 ├─ downloads/ #torrent downloads go here
+|
+├─ other/ #optional
+| 
 ```
 All other configuration files are located in the relative paths of the compose files.
