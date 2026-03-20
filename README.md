@@ -1,7 +1,12 @@
 # docker-configs
 Some of my Docker Configurations for my Homelab
 
+## What are Docker Compose files?
+Docker Compose files are configuration files that are written in YAML to act as a "blueprint" to run multi-container [Docker Applications](https://docs.docker.com/get-started/docker-overview/). 
+
 Some of these are probably not configured *ideally*..., but it's a work in progress. There may be some errors that can likely be easily solved with some AI help.
+
+
 
 ## Most of these configurations are cut down to the bare essential environment variables. 
 
@@ -59,6 +64,15 @@ _Note: The default path for media in the compose files is listed as follows:_
 All other configuration files are located in the relative paths of the compose files.
 
 ---
+
+# Getting Started
+First, make sure ```git``` is installed on your system and run ```git clone https://github.com/jasonprowe/docker-configs``` in a terminal, preferably in the user's home directory. 
+
+Next, run ```cd docker-configs``` and then run ```sudo ./setup.sh```.
+
+Make sure [```docker```](https://docs.docker.com/engine/install/) is installed for your platform to run these files.
+
+Change directories where each ```compose.yaml``` is located and run ```sudo docker compose up -d``` to start the application container and ```sudo docker compose down``` to stop and remove it. 
 
 # Notes
 
