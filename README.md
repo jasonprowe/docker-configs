@@ -46,7 +46,7 @@ The [media-stack](./media-stack) folder includes a pretty standard ARR suite (as
 
 - A Samba container is provided in [media-stack](./media-stack) for the Windows SMB Network Sharing Protocol, which defaults to sharing ```/data```.
 
-- Be sure to create ```/data``` using your primary user and ```chown -R 1000:1000 /data``` before getting started to make sure the permissions are set correctly
+- Be sure to create ```/data``` using your primary user and ```chown -R 1000:1000 /data``` before getting started to make sure the permissions are set correctly, or alternatively, use the provided ```directory-setup.sh``` script which does this automatically for you.
 
 _Note: The default path for media in the compose files is listed as follows:_
 ```yaml
