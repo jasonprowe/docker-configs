@@ -61,18 +61,43 @@ _Note: The default path for media in the compose files is listed as follows:_
 ├─ other/ #optional
 | 
 ```
-All other configuration files are located in the relative paths of the compose files.
+All other configuration files are located at the relative paths specified in the compose files.
 
 ---
 
 # Getting Started
-First, make sure ```git``` is installed on your system and run ```git clone https://github.com/jasonprowe/docker-configs``` in a terminal, preferably in the user's home directory. 
+1. Make sure ```git``` is installed on your system and run ```git clone https://github.com/jasonprowe/docker-configs``` in a terminal, preferably in the user's home directory. 
 
-Next, run ```cd docker-configs``` and then run ```sudo ./setup.sh```.
+2. Run ```cd docker-configs``` and then run ```sudo ./setup.sh```.
 
-Make sure [```docker```](https://docs.docker.com/engine/install/) is installed for your platform to run these files.
+3. Make sure [```docker```](https://docs.docker.com/engine/install/) is installed for your platform to run these files.
 
-Change directories where each ```compose.yaml``` is located and run ```sudo docker compose up -d``` to start the application container and ```sudo docker compose down``` to stop and remove it. 
+4. Change directories where each ```compose.yaml``` is located and run ```sudo docker compose up -d``` to start the application container and ```sudo docker compose down``` to stop and remove it. 
+
+## Setting Custom Configurations
+
+Custom configurations for each application can be set by changing the Environment Variables using a text editor in the ``` compose.yaml``` file.
+
+
+Example of changing the WebUI port of a Draw.IO application container ```compose.yaml```: 
+```yaml
+services:
+  drawio:
+    container_name: drawio
+    image: jgraph/drawio
+    ports:
+      - 8086:8080  # ports are defined as host:container
+    restart: unless-stopped
+```
+In this container, Draw.IO is published in the container on port ```8080```, but is bound to port ```8086``` on the host.
+
+Think of the colon as a tunnel punching a hole into the container. You cannot access the container without a defined way to map it onto the host.
+
+So, through port ```8086``` on the host, which would look something like ```http://localhost:8086```, you can access the Draw.IO application that _it thinks_ is running on port ```8080```.
+
+This also means when setting environemnt variables you almost never need to change the right side of the colon:
+
+'''change-this:not-this'''
 
 # Notes
 
