@@ -68,11 +68,11 @@ All other configuration files are located at the relative paths specified in the
 # Getting Started
 1. Make sure ```git``` is installed on your system and run ```git clone https://github.com/jasonprowe/docker-configs``` in a terminal, preferably in the user's home directory. 
 
-2. Run ```cd docker-configs``` and then run ```sudo ./setup.sh```.
+2. Run ```cd docker-configs``` and then run ```sudo ./directory-setup.sh```.
 
 3. Make sure [```docker```](https://docs.docker.com/engine/install/) is installed for your platform to run these files.
 
-4. Change directories where each ```compose.yaml``` is located and run ```sudo docker compose up -d``` to start the application container and ```sudo docker compose down``` to stop and remove it. 
+4. Change directories using ```cd``` where each ```compose.yaml``` is located and run ```sudo docker compose up -d``` to start the application container and ```sudo docker compose down``` to stop and remove it. 
 
 ## Setting Custom Configurations
 
@@ -95,9 +95,23 @@ Think of the colon as a tunnel punching a hole into the container. You cannot ac
 
 So, through port ```8086``` on the host, which would look something like ```http://localhost:8086```, you can access the Draw.IO application that _it thinks_ is running on port ```8080```.
 
-This also means when setting environemnt variables you almost never need to change the right side of the colon:
+This also means when setting environment variables, you seldom need to change the right side of the colon:
 
-'''change-this:not-this'''
+```change_this:not_this```
+
+Let's change this Draw.IO to be accessible on port ```8080``` on the host, as originally intended by the application container.
+
+Here's how it would look:
+```yaml
+services:
+  drawio:
+    container_name: drawio
+    image: jgraph/drawio
+    ports:
+      - 8080:8080  # port mapping changed to 8080:8080
+    restart: unless-stopped
+```
+Now, this application can be accessed from ```http://localhost:8080```.
 
 # Notes
 
