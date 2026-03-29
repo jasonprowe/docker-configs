@@ -68,7 +68,7 @@ All other configuration files are located at the relative paths specified in the
 # Getting Started
 1. Make sure ```git``` is installed on your system and run ```git clone https://github.com/jasonprowe/docker-configs``` in a terminal, preferably in the user's home directory. 
 
-2. Run ```cd docker-configs``` and then run ```sudo ./directory-setup.sh```.
+2. Change working directory using ```cd docker-configs```. Make the directory setup script executable by running ```sudo chmod +x ./directory-setup.sh``` and then run ```sudo ./directory-setup.sh``` to run the setup script.
 
 3. Make sure [```docker```](https://docs.docker.com/engine/install/) is installed for your platform to run these files.
 
