@@ -1,5 +1,5 @@
 # docker-configs
-Some of my Docker Configurations for my Homelab
+Some simple Docker Configurations for Homelabbing
 
 ## What are Docker Compose files?
 Docker Compose files are configuration files that are written in YAML to act as a "blueprint" to run multi-container [Docker Applications](https://docs.docker.com/get-started/docker-overview/). 
