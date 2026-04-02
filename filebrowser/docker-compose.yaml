@@ -7,7 +7,7 @@ services:
     ports:
       - "5323:80"
     volumes:
-      - /mnt/filebrowser-data:/srv
+      - /data:/srv
       - ./config:/config
       - ./database:/database
     environment:
